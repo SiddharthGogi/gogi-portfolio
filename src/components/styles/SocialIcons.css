@@ -65,7 +65,7 @@
 .resume-button:hover {
   color: #fff;
 }
-div.resume-button span {
+.resume-button span {
   color: #fff;
   font-size: 17px;
   margin-top: -1px;
@@ -96,8 +96,76 @@ div.resume-button span {
     font-size: 20px;
     line-height: 20px;
   }
-  div.resume-button span {
+  .resume-button span {
     font-size: 23px;
     margin-top: -1.5px;
   }
+}
+
+/* ── Resume Modal ────────────────────────────────────────────── */
+.resume-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: resumeFadeIn 0.3s ease;
+}
+
+@keyframes resumeFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.resume-modal-content {
+  position: relative;
+  max-width: min(700px, 92vw);
+  max-height: 92vh;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.7),
+    0 0 40px rgba(168, 85, 247, 0.25);
+  animation: resumeSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes resumeSlideUp {
+  from { transform: translateY(40px) scale(0.95); opacity: 0; }
+  to   { transform: translateY(0) scale(1);       opacity: 1; }
+}
+
+.resume-modal-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 92vh;
+  object-fit: contain;
+}
+
+.resume-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 1;
+}
+.resume-modal-close:hover {
+  background: rgba(168, 85, 247, 0.85);
+  transform: scale(1.1);
 }

@@ -6,6 +6,7 @@ interface Props {
   alt?: string;
   video?: string;
   link?: string;
+  scale?: number;
 }
 
 const WorkImage = (props: Props) => {
@@ -36,7 +37,7 @@ const WorkImage = (props: Props) => {
             <MdArrowOutward />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
+        <img src={props.image} alt={props.alt} style={{ transform: props.scale ? `scale(${props.scale})` : 'none' }} />
         {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
       </a>
     </div>

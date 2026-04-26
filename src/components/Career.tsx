@@ -15,43 +15,37 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>B.E. Mechatronics Engineering</h4>
+                <h5>Education</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2021-2025</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Mechatronics engineering graduate. Studies covered manufacturing systems, automation technologies, mechanical operations, CNC technology, machine kinematics, and production processes.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Inventory Control Engineer</h4>
+                <h5>Magadha Corporation</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2025-2026</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Managed and optimised inventory systems, ensured accurate stock levels and material flow, and analysed data using tools like Excel and AI. Applied Lean Manufacturing Principles and Quality Inspection techniques.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>AI in Automation & Mechatronics</h4>
+                <h5>Ongoing Projects</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Expanding expertise in collaborative robotics in industries, AI tools in automation, digital marketing, and advanced problem-solving methodologies to improve operational efficiency and workflow optimisation.
             </p>
           </div>
         </div>

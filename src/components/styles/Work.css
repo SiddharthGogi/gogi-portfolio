@@ -1,10 +1,17 @@
 .work-section h2 {
   margin-top: 100px;
-  font-size: 70px;
-  font-weight: 500;
+  font-size: 80px;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(135deg, #a855f7, #7c3aed, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .work-section h2 > span {
-  color: var(--accentColor);
+  -webkit-text-fill-color: transparent;
 }
 .work-section {
   transition: 0s;
@@ -31,16 +38,27 @@
   padding: 80px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
   width: 600px;
   box-sizing: border-box;
   border-right: 1px solid #363636;
   flex-shrink: 0;
   gap: 50px;
-  justify-content: start;
 }
-.work-flex .work-box:nth-child(even) {
-  flex-direction: column-reverse;
+
+.clickable-card:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
+
+.clickable-card:hover .work-title h3 {
+  color: #7f40ff;
+}
+
 .work-flex::before,
 .work-flex::after {
   content: "";
@@ -70,6 +88,14 @@
   margin: 0;
   font-weight: 600;
 }
+.work-year {
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  margin-top: 4px;
+}
 
 .work-info h4 {
   font-size: 18px;
@@ -92,6 +118,8 @@
 }
 .work-image-in {
   position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 .work-link {
   position: absolute;
@@ -126,8 +154,10 @@
   object-fit: cover;
 }
 .work-image img {
+  width: 100%;
+  aspect-ratio: 64 / 41;
+  object-fit: cover;
   max-width: 100%;
-  max-height: 350px;
 }
 @media only screen and (max-height: 900px) {
   .work-image img {

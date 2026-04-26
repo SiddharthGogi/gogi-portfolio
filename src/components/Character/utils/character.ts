@@ -34,13 +34,23 @@ const setCharacter = (
                 child.castShadow = true;
                 child.receiveShadow = true;
                 mesh.frustumCulled = true;
+
+                if (mesh.name && mesh.name.toLowerCase().includes("glass")) {
+                  mesh.visible = true;
+                  const material = mesh.material as THREE.MeshStandardMaterial;
+                  if (material && material.color) {
+                    material.color.setHex(0x111111); // black ink
+                  }
+                }
               }
             });
             resolve(gltf);
             setCharTimeline(character, camera);
             setAllTimeline();
-            character!.getObjectByName("footR")!.position.y = 3.36;
-            character!.getObjectByName("footL")!.position.y = 3.36;
+            const footR = character!.getObjectByName("footR");
+            const footL = character!.getObjectByName("footL");
+            if (footR) footR.position.y = 3.36;
+            if (footL) footL.position.y = 3.36;
             dracoLoader.dispose();
           },
           undefined,
